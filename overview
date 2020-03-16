@@ -14,3 +14,6 @@
  容易造成永久堆满，触发OutOfMemory异常。spring默认使用jdk动态代理，如果类没有接口，则使用cglib.
 2--spring 事务管理机制 声明式事务管理@Transacational注解，对使用aop对方法进行拦截
 @Transacational失效的几种场景-- https://www.cnblogs.com/qizhelongdeyang/p/12418386.html
+3--CompletableFuture api
+4--多线程下载
+5--google chrome extension 
