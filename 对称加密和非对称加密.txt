@@ -1,0 +1,11 @@
+对称机密：使用同一套密钥进行加密解密；加密解密效率高， 问题在于密钥的分发与管理；
+
+	A -> B 
+
+非对称加密：A持有priA, pubA, pubB; B持有 priB, pubB, pubA; 只有对应的pri 可以解密 pub加密的信息；
+	  A 发送 pubB加密的data --> B; B使用priB对pubB+data进行解密，得到data; 反之亦然，缺点在于加密解密过程更耗时；
+
+混合加密：A持有priA, pubA, pubB, key(对称加密密钥); B持有 priB, pubB, pubA;
+	A发送 pubB加密的key+key加密的data -->B ; B使用B使用priB对pubB+key进行解密，得到key,
+	 使用key对key+data的数据包进行解密得到data;
+ 
