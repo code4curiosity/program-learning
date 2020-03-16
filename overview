@@ -1,0 +1,14 @@
+1--分库分表：sharding-sphere-jdbc,对业务字段取模; 分布式id snowflake算法实现; 
+2--redis定时器：键空间消息（Redis Keyspace Notifications）;设置redis messageListener
+3--mysql 分页优化; 
+利用天然索引id字段和id排序：1: select * from mytbl where id >= ( select id from mytbl order by id limit 100000,1 ) limit 10;
+用join:SELECT * FROM mytbl a JOIN (select id from mytbl limit 866613, 20) b ON a.ID = b.id;原理是利用索引字段排序
+4--spring security+jwt权限验证
+5--使用相同密钥的对称加密；使用公钥+私钥的非对称加密；混合加密：使用对称加密的方法对数据包加密，使用非对称加密的方法加密对称加密的密钥
+6--spring 缓存注解：@Cacheable.@CachePut... 与redis整合；实现springframework Cache Interface
+todo
+1--动态代理：一个工程如果依赖另一个工程给的接口，但是另一个工程的接口不稳定，
+经常变更协议，就可以使用一个代理，接口变更时，只需要修改代理，不需要一一修改业务代码
+ jdk动态代理；cglib动态代理 : jdk创建对象的速度远大于cglib，这是由于cglib创建对象时需要操作字节码。cglib执行速度略大于jdk，
+ 所以比较适合单例模式。另外由于CGLIB的大部分类是直接对Java字节码进行操作，这样生成的类会在Java的永久堆中。如果动态代理操作过多，
+ 容易造成永久堆满，触发OutOfMemory异常。spring默认使用jdk动态代理，如果类没有接口，则使用cglib.
