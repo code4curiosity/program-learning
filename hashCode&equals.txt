@@ -1,0 +1,40 @@
+ 
+
+ map判断对象的方法就是先判断hashcode是否相等，如果相等再判断equals方法是否返回true，只有同时满足两个条件，最后才会被认为是相等的
+在使用map时使用自定义对象作为key查找元素，
+需要重写hashCode和equals方法，否则即使内容相同的两个对象map的get方法无法根据key找到对应的value
+
+
+
+public class HashCodeEqual {
+    public static void main(String[] args) {
+        Apple a1 = new Apple("Blue");
+        Apple a2 = new Apple("Green");
+        
+        HashMap<Apple, Integer> map = new HashMap<>();
+        map.put(a1, 10);
+        map.put(a2, 20);
+        
+        System.out.println(map.get(new Apple("Green")));
+    }
+}
+
+class Apple {
+    public String color;
+    
+    public Apple(String color) {
+        this.color = color;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if(! (obj instanceof Apple))
+            return false;
+        if(obj == this)
+            return true;
+        return this.color.equals(((Apple)obj).color);
+    }
+}
+
+
+
