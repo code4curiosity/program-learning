@@ -1,8 +1,6 @@
- 
-
- mapÅÐ¶Ï¶ÔÏóµÄ·½·¨¾ÍÊÇÏÈÅÐ¶ÏhashcodeÊÇ·ñÏàµÈ£¬Èç¹ûÏàµÈÔÙÅÐ¶Ïequals·½·¨ÊÇ·ñ·µ»Øtrue£¬Ö»ÓÐÍ¬Ê±Âú×ãÁ½¸öÌõ¼þ£¬×îºó²Å»á±»ÈÏÎªÊÇÏàµÈµÄ
-ÔÚÊ¹ÓÃmapÊ±Ê¹ÓÃ×Ô¶¨Òå¶ÔÏó×÷Îªkey²éÕÒÔªËØ£¬
-ÐèÒªÖØÐ´hashCodeºÍequals·½·¨£¬·ñÔò¼´Ê¹ÄÚÈÝÏàÍ¬µÄÁ½¸ö¶ÔÏómapµÄget·½·¨ÎÞ·¨¸ù¾ÝkeyÕÒµ½¶ÔÓ¦µÄvalue
+ ä¸ºä»€ä¹ˆé‡å†™ equals æ—¶å¿…é¡»é‡å†™ hashCode æ–¹æ³•ï¼Ÿ
+ å½“æˆ‘ä»¬åˆ›å»ºçš„ç±»new å‡ºæ¥çš„å¯¹è±¡éœ€è¦ç”¨åˆ°ç±»å¯¹åº”çš„æ•£åˆ—è¡¨æ—¶ï¼ˆç”¨HashSetï¼ŒHashMapç­‰åˆ©ç”¨æ•£åˆ—è¡¨è¿™ç§æ–¹å¼è¿›è¡ŒæŸ¥æ‰¾æ‰€å­˜å‚¨å¯¹è±¡çš„æ•°æ®ç»“æž„ï¼‰ï¼Œ
+ å¯¹äºŽå¯¹è±¡çš„åˆ¤ç­‰æ˜¯æ ¹æ®hashCodeå’Œequalsç¡®å®šçš„ï¼Œæ­¤æ—¶å¿…é¡»åŒæ—¶é‡å†™ä¸¤ä¸ªæ–¹æ³•
 
 
 
